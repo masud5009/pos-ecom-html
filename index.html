@@ -13,19 +13,527 @@
     <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
     <!-- bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Slick CSS -->
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
+    <!-- wow js -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <!-- fontawesome Icon CSS -->
     <script src="js/icon.js"></script>
-    <!-- min Style CSS -->
+    <!-- custom CSS -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
+    <!-- Header Start -->
+    <header class="header sticky-top">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <!-- Logo -->
+                <a class="navbar-brand" href="index.html">
+                    <img src="images/logo.png" alt="Pos Ecommerce Logo" class="logo">
+                </a>
 
-    <!-- jquery JS -->
+                <!-- Mobile Toggle Button -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Navigation Menu -->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Shop <i class="fal fa-plus"></i>
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="shop.html">All Products</a></li>
+                                <li><a class="dropdown-item" href="category.html">Categories</a></li>
+                                <li><a class="dropdown-item" href="offers.html">Special Offers</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+
+                    <!-- Search Bar -->
+                    <form class="d-flex search-bar">
+                        <input class="form-control me-2" type="search" placeholder="Search products..."
+                            aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit"><i class="fas fa-search"></i></button>
+                    </form>
+
+                    <!-- Shopping Cart with Hover Modal -->
+                    <div class="shopping-cart ms-3">
+                        <a href="cart.html" class="position-relative cart-icon">
+                            <i class="fas fa-shopping-cart fa-lg"></i>
+                            <span
+                                class="cart-count position-absolute top-0 start-100 translate-middle badge bg-danger">0</span>
+                        </a>
+                        <!-- Cart Modal -->
+                        <div class="cart-modal">
+                            <div class="cart-modal-content">
+                                <h6>Your Cart</h6>
+                                <div class="cart-items">
+                                    <p>No items in the cart.</p>
+                                </div>
+                                <a href="cart.html" class="btn btn-primary w-100">View Cart</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="shopping-cart ms-3">
+                        <a href="cart.html" class="wishlist">
+                            <i class="fas fa-heart fa-lg"></i>
+                            <span
+                                class="cart-count position-absolute top-0 start-100 translate-middle badge bg-danger">0</span>
+                        </a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!-- Header End -->
+
+    <!-- Hero Section Start -->
+    <section class="hero-section" aria-label="Hero Section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-md-12">
+                    <div class="hero-slider animated-slider" id="main-slider">
+                        <div class="banner slider-item">
+                            <figure>
+                                <img src="images/banner-1.jpg" alt="Gaming Computer Banner 1">
+                                <figcaption>
+                                    <h5 class="subtitle" data-animation="animate__fadeInUp" data-delay="0.3s">Subtitle
+                                    </h5>
+                                    <h1 class="title" data-animation="animate__fadeInUp" data-delay="0.5s">New Gaming
+                                        Computer</h1>
+                                    <p data-animation="animate__fadeInUp" data-delay="0.7s">Lorem ipsum dolor sit amet
+                                        consectetur adipisicing elit.</p>
+                                    <div class="button" data-animation="animate__fadeInUp" data-delay="0.9s">
+                                        <button class="btn main-btn" aria-label="Order Now">Order Now</button>
+                                    </div>
+                                </figcaption>
+                            </figure>
+                        </div>
+                        <div class="banner slider-item">
+                            <figure>
+                                <img src="images/banner-2.jpg" alt="Gaming Computer Banner 2">
+                                <figcaption>
+                                    <h5 class="subtitle" data-animation="animate__fadeInUp" data-delay="0.3s">Subtitle 2
+                                    </h5>
+                                    <h1 class="title" data-animation="animate__fadeInUp" data-delay="0.5s">New Gaming
+                                        Computer 2</h1>
+                                    <p data-animation="animate__fadeInUp" data-delay="0.7s">Lorem ipsum dolor sit amet
+                                        consectetur adipisicing elit.</p>
+                                    <div class="button" data-animation="animate__fadeInUp" data-delay="0.9s">
+                                        <button class="btn main-btn" aria-label="Order Now">Order Now</button>
+                                    </div>
+                                </figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="static-banner">
+                        <div class="banner">
+                            <img src="images/banner-sm-1.jpg" alt="Slide 1">
+                            <h5 class="subtitle">Subtitle 3</h5>
+                            <h1 class="title">New Gaming Computer 3</h1>
+                            <div class="button">
+                                <button class="btn main-btn">Order Now</button>
+                            </div>
+                        </div>
+                        <div class="banner">
+                            <img src="images/banner-sm-3.jpg" alt="Slide 1">
+                            <h5 class="subtitle">Subtitle 3</h5>
+                            <h1 class="title">New Gaming Computer 3</h1>
+                            <div class="button">
+                                <button class="btn main-btn">Order Now</button>
+                            </div>
+                        </div>
+                        <div class="banner">
+                            <img src="images/banner-sm-2.jpg" alt="Slide 1">
+                            <h5 class="subtitle">Subtitle 3</h5>
+                            <h1 class="title">New Gaming Computer 3</h1>
+                            <div class="button">
+                                <button class="btn main-btn">Order Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Hero Section End -->
+
+    <!-- Flash Section Start-->
+    <section class="flash_sale-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <h2 class="title">🔥 Flash Sale - Limited Time Offer! 🔥</h2>
+                </div>
+                <div class="col-lg-4">
+                    <button class="btn main-btn">Show More <i class="fas fa-arrow-right"></i></button>
+                </div>
+            </div>
+
+            <div class="flash-sale-slider">
+                <div class="product-div">
+                    <div class="product" data-time="2025-02-20T23:59:59">
+                        <img src="images/products/product-1.png" alt="Product 1">
+                        <h5 class="title">Product 1</h5>
+                        <p><strong class="current_price">$25.00</strong> <del class="prev_price">$40.00</del></p>
+                        <div class="countdown"></div>
+                        <!-- New div for hover actions -->
+                        <div class="hover-actions">
+                            <button class="action-btn"><i class="fas fa-shopping-cart"></i> Cart</button>
+                            <button class="action-btn"><i class="fas fa-heart"></i> Wishlist</button>
+                            <button class="action-btn"><i class="fas fa-eye"></i> View</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-div">
+                    <div class="product" data-time="2025-02-20T23:59:59">
+                        <img src="images/products/product-1.png" alt="Product 1">
+                        <h5 class="title">Product 1</h5>
+                        <p><strong class="current_price">$25.00</strong> <del class="prev_price">$40.00</del></p>
+                        <div class="countdown"></div>
+                        <!-- New div for hover actions -->
+                        <div class="hover-actions">
+                            <button class="action-btn"><i class="fas fa-shopping-cart"></i> Cart</button>
+                            <button class="action-btn"><i class="fas fa-heart"></i> Wishlist</button>
+                            <button class="action-btn"><i class="fas fa-eye"></i> View</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-div">
+                    <div class="product" data-time="2025-02-20T23:59:59">
+                        <img src="images/products/product-1.png" alt="Product 1">
+                        <h5 class="title">Product 1</h5>
+                        <p><strong class="current_price">$25.00</strong> <del class="prev_price">$40.00</del></p>
+                        <div class="countdown"></div>
+                        <!-- New div for hover actions -->
+                        <div class="hover-actions">
+                            <button class="action-btn"><i class="fas fa-shopping-cart"></i> Cart</button>
+                            <button class="action-btn"><i class="fas fa-heart"></i> Wishlist</button>
+                            <button class="action-btn"><i class="fas fa-eye"></i> View</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-div">
+                    <div class="product" data-time="2025-02-20T23:59:59">
+                        <img src="images/products/product-1.png" alt="Product 1">
+                        <h5 class="title">Product 1</h5>
+                        <p><strong class="current_price">$25.00</strong> <del class="prev_price">$40.00</del></p>
+                        <div class="countdown"></div>
+                        <!-- New div for hover actions -->
+                        <div class="hover-actions">
+                            <button class="action-btn"><i class="fas fa-shopping-cart"></i> Cart</button>
+                            <button class="action-btn"><i class="fas fa-heart"></i> Wishlist</button>
+                            <button class="action-btn"><i class="fas fa-eye"></i> View</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Flash Section End-->
+
+    <!-- Categories Section Start-->
+    <section class="categories-section">
+        <div class="container">
+            <h2 class="section-title">Explore Our Categories</h2>
+            <div class="categories-grid">
+                <!-- Category 1 -->
+                <a href="">
+                    <div class="category-card">
+                        <div class="category-image">
+                            <img src="images/category/1.png" alt="Electronics">
+                        </div>
+                        <h3 class="category-title">Electronics</h3>
+                    </div>
+                </a>
+                <!-- Category 2 -->
+                <a href="">
+                    <div class="category-card">
+                        <div class="category-image">
+                            <img src="images/category/1.png" alt="Fashion">
+                        </div>
+                        <h3 class="category-title">Fashion
+                        </h3>
+                    </div>
+                </a>
+                <!-- Category 3 -->
+                <a href="">
+                    <div class="category-card">
+                        <div class="category-image">
+                            <img src="images/category/1.png" alt="Home Decor">
+                        </div>
+                        <h3 class="category-title">
+                            Home Decor
+                        </h3>
+                    </div>
+                </a>
+                <!-- Category 4 -->
+                <a href="">
+                    <div class="category-card">
+                        <div class="category-image">
+                            <img src="images/category/1.png" alt="Beauty">
+                        </div>
+                        <h3 class="category-title">
+
+                            Beauty
+                        </h3>
+                    </div>
+                </a>
+                <!-- Category 4 -->
+                <a href="">
+                    <div class="category-card">
+                        <div class="category-image">
+                            <img src="images/category/1.png" alt="Beauty">
+                        </div>
+                        <h3 class="category-title">
+
+                            Beauty
+                        </h3>
+                    </div>
+                </a>
+                <!-- Category 4 -->
+                <a href="">
+                    <div class="category-card">
+                        <div class="category-image">
+                            <img src="images/category/1.png" alt="Beauty">
+                        </div>
+                        <h3 class="category-title">
+
+                            Beauty
+                        </h3>
+                    </div>
+                </a>
+                <!-- Category 4 -->
+                <a href="">
+                    <div class="category-card">
+                        <div class="category-image">
+                            <img src="images/category/1.png" alt="Beauty">
+                        </div>
+                        <h3 class="category-title">
+
+                            Beauty
+                        </h3>
+                    </div>
+                </a>
+                <!-- Category 4 -->
+                <a href="">
+                    <div class="category-card">
+                        <div class="category-image">
+                            <img src="images/category/1.png" alt="Beauty">
+                        </div>
+                        <h3 class="category-title">
+
+                            Beauty
+                        </h3>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- Categories Section End-->
+
+
+    <!--Product Section Start-->
+    <section class="category-tabs-section">
+        <div class="container">
+            <h2 class="section-title">Shop By Category</h2>
+            <!-- Category Tabs -->
+            <div class="category-tabs">
+                <button class="tab-button active" data-category="electronics">Electronics</button>
+                <button class="tab-button" data-category="fashion">Fashion</button>
+                <button class="tab-button" data-category="home-decor">Home Decor</button>
+            </div>
+
+            <!-- Product Grids -->
+            <div class="product-grid active" data-category="electronics">
+                <div class="col-lg-12">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-6">
+                            <div class="product-div">
+                                <div class="product" data-time="2025-02-20T23:59:59">
+                                    <img src="images/products/product-1.png" alt="Product 1">
+                                    <h5 class="title">Product 1</h5>
+                                    <p><strong class="current_price">$25.00</strong> <del
+                                            class="prev_price">$40.00</del></p>
+                                    <div class="countdown"></div>
+                                    <!-- New div for hover actions -->
+                                    <div class="hover-actions">
+                                        <button class="action-btn"><i class="fas fa-shopping-cart"></i> Cart</button>
+                                        <button class="action-btn"><i class="fas fa-heart"></i> Wishlist</button>
+                                        <button class="action-btn"><i class="fas fa-eye"></i> View</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <div class="product-div">
+                                <div class="product" data-time="2025-02-20T23:59:59">
+                                    <img src="images/products/product-1.png" alt="Product 1">
+                                    <h5 class="title">Product 1</h5>
+                                    <p><strong class="current_price">$25.00</strong> <del
+                                            class="prev_price">$40.00</del></p>
+                                    <div class="countdown"></div>
+                                    <!-- New div for hover actions -->
+                                    <div class="hover-actions">
+                                        <button class="action-btn"><i class="fas fa-shopping-cart"></i> Cart</button>
+                                        <button class="action-btn"><i class="fas fa-heart"></i> Wishlist</button>
+                                        <button class="action-btn"><i class="fas fa-eye"></i> View</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <div class="product-div">
+                                <div class="product" data-time="2025-02-20T23:59:59">
+                                    <img src="images/products/product-1.png" alt="Product 1">
+                                    <h5 class="title">Product 1</h5>
+                                    <p><strong class="current_price">$25.00</strong> <del
+                                            class="prev_price">$40.00</del></p>
+                                    <div class="countdown"></div>
+                                    <!-- New div for hover actions -->
+                                    <div class="hover-actions">
+                                        <button class="action-btn"><i class="fas fa-shopping-cart"></i> Cart</button>
+                                        <button class="action-btn"><i class="fas fa-heart"></i> Wishlist</button>
+                                        <button class="action-btn"><i class="fas fa-eye"></i> View</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <div class="product-div">
+                                <div class="product" data-time="2025-02-20T23:59:59">
+                                    <img src="images/products/product-1.png" alt="Product 1">
+                                    <h5 class="title">Product 1</h5>
+                                    <p><strong class="current_price">$25.00</strong> <del
+                                            class="prev_price">$40.00</del></p>
+                                    <div class="countdown"></div>
+                                    <!-- New div for hover actions -->
+                                    <div class="hover-actions">
+                                        <button class="action-btn"><i class="fas fa-shopping-cart"></i> Cart</button>
+                                        <button class="action-btn"><i class="fas fa-heart"></i> Wishlist</button>
+                                        <button class="action-btn"><i class="fas fa-eye"></i> View</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!--Product Section End-->
+
+    <!--Footer Sections Start-->
+    <!-- Footer Section Start -->
+    <footer class="footer-section">
+        <div class="container">
+            <div class="footer-top">
+                <div class="row">
+                    <!-- About Section -->
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-widget">
+                            <h4 class="footer-title">About Us</h4>
+                            <p class="footer-text">
+                                Pos is your one-stop destination for the latest trends in electronics, fashion, home
+                                decor, and more. We offer high-quality products at affordable prices.
+                            </p>
+                            <div class="footer-social">
+                                <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                                <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                                <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Quick Links -->
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-widget">
+                            <h4 class="footer-title">Quick Links</h4>
+                            <ul class="footer-links">
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="shop.html">Shop</a></li>
+                                <li><a href="about.html">About Us</a></li>
+                                <li><a href="contact.html">Contact Us</a></li>
+                                <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                                <li><a href="terms-conditions.html">Terms & Conditions</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Contact Information -->
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-widget">
+                            <h4 class="footer-title">Contact Us</h4>
+                            <ul class="footer-contact">
+                                <li><i class="fas fa-map-marker-alt"></i> 123 Main Street, City, Country</li>
+                                <li><i class="fas fa-phone"></i> +123 456 7890</li>
+                                <li><i class="fas fa-envelope"></i> info@pos.com</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Newsletter Subscription -->
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-widget">
+                            <h4 class="footer-title">Newsletter</h4>
+                            <p class="footer-text">
+                                Subscribe to our newsletter to get the latest updates and offers.
+                            </p>
+                            <form class="newsletter-form">
+                                <input type="email" placeholder="Enter your email" required>
+                                <button type="submit" class="main-btn">Subscribe</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <div class="row">
+                    <div class="col-md-12">
+                        <p class="footer-copy">
+                            &copy; 2023 Pos. All Rights Reserved. Designed by <a href="#">Masud Rana</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Section End -->
+    <!--Footer Sections End-->
+
+    <!-- jQuery and Slick JS -->
     <script src="js/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
     <!-- bootstrap JS -->
-    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+
     <!-- main JS -->
     <script src="js/script.js"></script>
 </body>
